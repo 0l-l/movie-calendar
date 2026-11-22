@@ -1,56 +1,27 @@
-# Welcome to your Expo app 👋
+# Movie Calendar
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Movie Calendar is a personal diary for the movies I watch. I chose a calendar because I wanted to find a movie by the day I watched it and see my viewing history at a glance.
 
-## Get started
+## Screens
 
-1. Install dependencies
+- **Calendar:** Browse months and tap a date to open its entry. A red dot marks each date with a saved movie.
+- **Movie:** View, add, or change the movie title for the selected date. Saving takes you back to the calendar. Each date holds one title, stored locally on the device.
+
+## Setup and running
+
+This project uses Expo SDK 58 and was tested on an iPhone with Expo Go. Use Node.js 22.13 or newer.
+
+1. Clone this repository and open the project folder in a terminal.
+2. Run:
 
    ```bash
    npm install
-   ```
-
-2. Start the app
-
-   ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. Connect your computer and iPhone to the same Wi-Fi network. Sign in to the same Expo account in Expo Go and in the terminal with `npx expo login`.
+4. Scan the QR code with the iPhone Camera app to open the project in Expo Go.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## What I learned
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+One thing that surprised me was that seeing a red dot immediately after saving only checks part of the app. Opening the date again after a reload checks that the app can read the saved title from the phone's storage.
